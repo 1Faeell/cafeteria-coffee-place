@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee’s Place | O sabor que desperta</title>
+    <link rel="stylesheet" href="assets/css/root.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/hamburguer.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/images/logo-cafeteria.png" alt="Logo da Cafeteria" />
+          <!-- <p>Coffee’s <span>Place</span></p> -->
+        </div>
+
+        <!-- Lista de Navegação -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+
+        <!-- Botão Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- SEÇÃO HERO -->
+      <section id="home" class="hero">
+        <div class="hero-conteudo">
+          <h1>Bem-vindo ao <span>Coffee’s Place</span></h1>
+          <p>
+            Onde cada gole é uma experiência e cada aroma conta uma história.
+            Desperte seus sentidos com o verdadeiro sabor do café artesanal.
+          </p>
+          <a href="#cardapio" class="btn">Explorar Cardápio</a>
+        </div>
+      </section>
+
+      <!-- SEÇÃO SOBRE -->
+      <section id="sobre" class="sobre">
+        <h2>Nossa Essência</h2>
+        <div class="container">
+          <div class="sobre-conteudo">
+            <p>
+              No <strong>Coffee’s Place</strong>, acreditamos que o café vai
+              muito além de uma bebida — ele é um ritual, um ponto de encontro e
+              um momento de respiro em meio à correria do dia. Aqui, cada xícara
+              é preparada com carinho e dedicação, unindo sabores artesanais,
+              aroma intenso e hospitalidade genuína. Nosso propósito é
+              transformar momentos simples em experiências memoráveis. Queremos
+              que cada gole desperte boas lembranças, inspire boas conversas e
+              aqueça o coração. Mais do que servir café, buscamos criar um
+              espaço onde as pessoas se sintam em casa — um refúgio de
+              aconchego, música leve, risadas sinceras e boas histórias.
+            </p>
+            <ul class="valores">
+              <li>
+                <i class="bi bi-stars"></i> <strong>Qualidade:</strong> grãos
+                selecionados e torra artesanal.
+              </li>
+              <li>
+                <i class="bi bi-palette-fill"></i>
+                <strong>Autenticidade:</strong> ambiente acolhedor e inspirador.
+              </li>
+              <li>
+                <i class="bi bi-people-fill"></i> <strong>Inclusão:</strong> um
+                lugar feito para todos.
+              </li>
+            </ul>
+          </div>
+          <img src="assets/images/cafeteria.jpg" alt="café foto" />
+        </div>
+      </section>
+
+      <!-- SEÇÃO CARDÁPIO -->
+      <section id="cardapio" class="produtos">
+        <div class="container">
+          <h2>Nosso Cardápio</h2>
+          <p class="descricao">
+            Sabores que combinam tradição e criatividade, feitos para todos os
+            momentos do seu dia.
+          </p>
+          <div id="cardapio-content"></div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DEPOIMENTOS -->
+      <section id="depoimentos" class="depoimentos">
+        <div class="container">
+          <h2>O que dizem sobre nós</h2>
+          <p class="descricao">
+            A satisfação dos nossos clientes é o que torna o Coffee’s Place tão
+            especial. Confira o que eles dizem sobre suas experiências.
+          </p>
+          <p class="arrastar"><<< Arraste para os lados >>></p>
+          <div id="depoimentos-wrapper" class="depoimentos-wrapper"></div>
+          <p class="arrastar"><<< >>></p>
+        </div>
+      </section>
+
+      <!-- SEÇÃO LOCALIZAÇÃO -->
+      <section id="localizacao" class="localizacao">
+        <h2>Venha nos visitar</h2>
+        <div class="container">
+          <p class="descricao">
+            Experimente o clima acolhedor do <strong>Coffee’s Place</strong> e
+            descubra o prazer de uma pausa com propósito.
+          </p>
+          <div class="contato-e-mapa">
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32156.163308328036!2d-38.514824260449195!3d-12.978321699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71605f6636b46f7%3A0xf196e1c5f67e46e6!2sCafeteria%20Splash%20Bebidas%20Urbanas%20-%20Salvador-BA!5e1!3m2!1spt-BR!2sbr!4v1760398075862!5m2!1spt-BR!2sbr"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="contato-info">
+              <p>
+                <strong><i class="bi bi-geo-alt-fill"></i> Endereço:</strong>
+                Rua do Café, 123 - Centro
+              </p>
+              <p>
+                <strong><i class="bi bi-telephone"></i> Telefone:</strong> (11)
+                1234-5678
+              </p>
+              <p>
+                <strong><i class="bi bi-envelope"></i> E-mail:</strong>
+                contato@coffeesplace.com
+              </p>
+              <p>
+                <strong><i class="bi bi-clock-fill"></i> Horário:</strong>
+                Seg-Sex: 7h-20h | Sáb-Dom: 8h-18h
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
+
+      <!-- RODAPÉ -->
+      <footer>
+        <div class="container">
+          <p>&copy; 2025 Coffee’s Place — Todos os direitos reservados.</p>
+          <p class="slogan">Mais que café, um lugar pra ficar.</p>
+        </div>
+        <div class="social-icons">
+          <a href="https://wa.me/71988327708"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://linkedin.com/in/rafaelsfront"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="https://github.com/1faeell"><i class="bi bi-github"></i></a>
+        </div>
+      </footer>
+    </main>
+    <script src="assets/js/cardapio.js"></script>
+    <script src="assets/js/depoimento.js"></script>
+    <script src="assets/js/hamburguer.js"></script>
+    <script src="assets/js/scrolltotop.js"></script>
+  </body>
+</html>

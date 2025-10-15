@@ -1,0 +1,76 @@
+{
+  "depoimentos": [
+    {
+      "nome": "Ana Souza",
+      "profissao": "Cliente frequente",
+      "mensagem": "Ambiente incrível e um café delicioso! É impossível vir só uma vez.",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Marcos Oliveira",
+      "profissao": "Amante de café",
+      "mensagem": "O atendimento é impecável e o aroma do lugar é simplesmente mágico!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Carla Mendes",
+      "profissao": "Designer e apaixonada por café",
+      "mensagem": "O melhor cappuccino da cidade. Dá vontade de morar aqui!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "João Pereira",
+      "profissao": "Cliente desde 2023",
+      "mensagem": "O Coffee’s Place é aquele tipo de lugar que te faz esquecer o tempo. Simplesmente perfeito!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Luciana Ribeiro",
+      "profissao": "Empresária",
+      "mensagem": "Os cafés especiais são incríveis e o ambiente é acolhedor. Ideal para reuniões!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Pedro Lima",
+      "profissao": "Programador",
+      "mensagem": "O Wi-Fi é ótimo, o café é melhor ainda. Meu novo escritório favorito!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Fernanda Castro",
+      "profissao": "Fotógrafa",
+      "mensagem": "Cada cantinho do lugar é fotogênico. E o aroma de café? Inesquecível!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Ricardo Gomes",
+      "profissao": "Barista amador",
+      "mensagem": "Um lugar que respeita o café de verdade. Dá pra sentir o cuidado em cada xícara!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Patrícia Lima",
+      "profissao": "Turista",
+      "mensagem": "Descobri o Coffee’s Place por acaso e agora recomendo pra todo mundo!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Eduardo Martins",
+      "profissao": "Estudante universitário",
+      "mensagem": "Ambiente tranquilo, música boa e um espresso que desperta até alma.",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Juliana Alves",
+      "profissao": "Chef de cozinha",
+      "mensagem": "A combinação de sabores e aromas é perfeita. Um dos meus lugares favoritos!",
+      "imagem": "assets/images/icon-person.png"
+    },
+    {
+      "nome": "Tiago Ferreira",
+      "profissao": "Professor de história",
+      "mensagem": "O lugar tem uma vibe única, parece uma viagem no tempo. Café de primeira!",
+      "imagem": "assets/images/icon-person.png"
+    }
+  ]
+}
