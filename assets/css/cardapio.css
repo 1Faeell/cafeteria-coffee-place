@@ -193,7 +193,7 @@ header {
     flex-direction: column;
     background: var(--marrom-escuro);
     width: 100%;
-    height: calc(65vh - 75px);
+    height: calc(70vh - 75px);
     justify-content: flex-start;
     padding: 40px 20px;
     transition: top 0.4s ease;
@@ -448,11 +448,11 @@ footer .social-icons i:hover {
   }
 
   .item img {
-    height: 150px;
+    height: 200px;
   }
 }
 
 /* 🔹 Escala fluida de fontes */
 html {
-  font-size: clamp(14px, 1.2vw, 18px);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
 }

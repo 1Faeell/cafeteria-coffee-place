@@ -734,7 +734,7 @@ footer .social-icons i:hover {
 
 /* 🔹 Escala fluida de fontes */
 html {
-  font-size: clamp(14px, 1.2vw, 18px);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
 }
 
 /* Isso faz o tamanho base do texto se ajustar:
