@@ -2,25 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
 
-  // Alterna o menu
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("open");
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("show"); // importante: a classe é "show"
   });
 
-  // Fecha ao clicar fora
   document.addEventListener("click", (e) => {
-    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove("active");
-      hamburger.classList.remove("open");
+    const clicouFora =
+      !hamburger.contains(e.target) && !navLinks.contains(e.target);
+    if (clicouFora) {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("show");
     }
   });
 
-  // Fecha o menu ao clicar em um link
   navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      hamburger.classList.remove("open");
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("show");
     });
   });
 });

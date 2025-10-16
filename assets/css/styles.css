@@ -1,7 +1,17 @@
-/* ================================
-   🎨 Coffee's Place - Tema Dark Coffee
-   Autor: Rafael & Daisy
-   ================================ */
+/* 🎯 VARIÁVEIS DE CORES */
+:root {
+  --preto: #121212;
+  --marrom-mais-escuro: #1b110e;
+  --marrom-escuro: #271b18;
+  --marrom: #4b2e05;
+  --dourado: #c5a572;
+  --bege: #e8d8b8;
+  --branco: #f9f6f2;
+  --cinza: #b3a698;
+  --accent: #d4af7f;
+  --fonte-principal: "Poppins", sans-serif;
+  --fonte-titulo: "Playfair Display", serif;
+}
 
 /* RESETA ESTRUTURA BÁSICA */
 * {
@@ -16,7 +26,6 @@ body {
   color: var(--bege);
   font-family: var(--fonte-principal);
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
 /* CONTAINERS GERAIS */
@@ -26,81 +35,127 @@ body {
   margin: 0 auto;
 }
 
-/* =========================
-   CABEÇALHO E NAVEGAÇÃO
-   ========================= */
+/* =============================
+   🌟 HEADER / NAVBAR
+============================= */
 header {
-  background-color: var(--marrom-escuro);
-  padding: 0 0;
+  width: 100%;
+  background: var(--marrom-mais-escuro);
+  color: var(--bege);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
-  z-index: 100;
-  border-bottom: 1px solid var(--dourado);
+  z-index: 999;
 }
 
 .navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
 }
 
+/* =============================
+   ☕ LOGO
+============================= */
 .logo {
   display: flex;
   align-items: center;
-  font-family: var(--fonte-titulo);
+  gap: 10px;
 }
 
 .logo img {
-  width: 80px;
-  height: auto;
-  /* border-radius: 50%; */
-  /* position: absolute; */
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  /* filter: drop-shadow(0 0 3px rgba(197, 165, 114, 0.5)); */
+  transition: transform 0.3s ease;
 }
-/* .logo p {
-  font-size: 1.2rem;
-  color: var(--dourado);
-  font-style: italic;
-  margin-top: 4px;
-} */
-.logo span {
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.logo p {
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
   color: var(--bege);
+  margin: 0;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--marrom-escuro);
+.logo span {
+  color: var(--dourado);
 }
 
-/* Links principais */
-/* 🌙 Estilos padrão do menu (desktop) */
+/* =============================
+   🔗 LINKS DE NAVEGAÇÃO
+============================= */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
   list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--bege);
   font-weight: 500;
+  font-family: var(--fonte-principal);
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  color: var(--accent);
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--dourado);
+  transition: width 0.3s ease;
 }
 
-/* Ícone do menu hambúrguer */
+.nav-links li a:hover {
+  color: var(--dourado);
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* =============================
+   🌐 ÍCONES SOCIAIS
+============================= */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 25px;
+}
+
+.social-icons a {
+  color: var(--bege);
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--dourado);
+  transform: translateY(-3px);
+}
+
+/* =============================
+   🍔 MENU HAMBURGER
+============================= */
 .hamburger {
   display: none;
   flex-direction: column;
-  justify-content: center;
   cursor: pointer;
   gap: 5px;
 }
@@ -108,59 +163,25 @@ header {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: var(--dourado);
-  border-radius: 2px;
+  background: var(--dourado);
+  border-radius: 5px;
   transition: all 0.3s ease;
 }
 
-/* Efeito de X quando aberto */
-.hamburger.open span:nth-child(1) {
-  transform: rotate(30deg) translateY(9px);
-}
-
-.hamburger.open span:nth-child(2) {
+/* Animação do menu aberto */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(32deg) translate(6px, 6px);
   opacity: 0;
 }
 
-.hamburger.open span:nth-child(3) {
-  transform: rotate(-30deg) translateY(-9px);
+.hamburger.active span:nth-child(2) {
+  /* opacity: 0; */
+  transform: scale(1.5);
 }
 
-/* 🍔 Estilos mobile (menu hamburguer) */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 90px;
-    right: 0;
-    left: 0;
-    background-color: var(--marrom-mais-escuro);
-
-    flex-direction: column;
-    align-items: center;
-    /* display: none; */
-    padding: 1rem;
-    margin: 0;
-    gap: 0.5rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li a {
-    display: flex;
-    width: 100%;
-    padding: 1.5rem 0.5rem;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--marrom-escuro);
-  }
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-32deg) translate(6px, -6px);
+  opacity: 0;
 }
 
 /* =========================
@@ -320,6 +341,10 @@ header {
   background-position: center;
   background-size: cover;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #cardapio h2 {
@@ -393,8 +418,9 @@ header {
 }
 
 #cardapio-content .item img {
-  width: 270px;
-  height: 160px;
+  max-width: 270px;
+  width: 100%;
+  height: 180px;
   object-fit: cover;
   border-radius: 0 8px 8px 8px;
 }
@@ -402,6 +428,24 @@ header {
 #cardapio-content .item-content .price {
   font-weight: bold;
   color: var(--dourado);
+}
+
+/* Botão "Ver mais..." */
+#cardapio .btn-vermais {
+  background-color: var(--dourado);
+  color: var(--preto);
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+#cardapio .btn-vermais:hover {
+  background-color: var(--accent);
+  transform: scale(1.05);
 }
 
 /* =============================
@@ -431,11 +475,12 @@ header {
   background: linear-gradient(
       to bottom,
       rgba(18, 12, 10, 1),
-      rgba(0, 0, 0, 0.9)
+      rgba(0, 0, 0, 0.8)
     ),
     url(../images/fundo-vetorizado-cafe.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .depoimentos h2 {
@@ -665,6 +710,7 @@ footer .social-icons i:hover {
   filter: brightness(0.8);
 }
 
+/* SCROLL TO TOP */
 #back-to-top {
   position: fixed;
   bottom: 35px;
@@ -684,4 +730,74 @@ footer .social-icons i:hover {
 }
 #back-to-top:hover {
   filter: brightness(0.8);
+}
+
+/* 🔹 Escala fluida de fontes */
+html {
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* Isso faz o tamanho base do texto se ajustar:
+   - mínimo: 14px em telas pequenas
+   - ideal: 1.2vw (1.2% da largura da viewport)
+   - máximo: 18px em telas grandes
+*/
+
+/* 🔹 Containers adaptáveis */
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+/* GRID DE ITENS */
+.grid-cardapio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.item-cardapio {
+  background: var(--preto);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.item-cardapio:hover {
+  transform: translateY(-5px);
+}
+
+.item-cardapio img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-cardapio h3 {
+  color: var(--dourado);
+  margin: 0.8rem 0 0.3rem;
+}
+
+.item-cardapio p {
+  color: var(--bege);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-cardapio .preco {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

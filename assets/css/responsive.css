@@ -1,59 +1,24 @@
-/* =========================
-   RESPONSIVIDADE
-   ========================= */
-
-@media (max-width: 1200px) {
-  /* 🔹 Regras gerais pra todas as imagens */
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
-}
-
-@media (max-width: 1000px) {
-  .sobre .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 1rem;
-    width: 100%;
-  }
-  .sobre img {
-    max-width: 100%;
-    margin: 0 0 2rem 0;
-  }
-  .sobre-conteudo {
-    max-width: 100%;
-    width: 100%;
-    text-align: center;
-  }
-  .valores {
-    max-width: 100%;
-  }
-  .valores li {
-    text-align: center;
-  }
-}
-
 @media (max-width: 768px) {
-  .container {
-    padding: 0;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  header {
-    padding: 0.3rem 2rem;
-  }
+  /* HEADER / NAVEGAÇÃO ================= */
 
   .nav-links {
-    display: none;
+    position: fixed;
+    left: 0;
+    top: -100%; /* fica escondido inicialmente */
     flex-direction: column;
+    background: var(--marrom-escuro);
     width: 100%;
+    height: calc(65vh - 75px);
+    justify-content: flex-start;
+    padding: 40px 20px;
+    transition: top 0.4s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.4);
+    z-index: -1; /* garante que o menu fica por cima */
+  }
+
+  .nav-links.show {
+    left: 0;
+    top: 90px;
   }
 
   .nav-links li {
@@ -61,197 +26,98 @@
     text-align: center;
   }
 
-  .nav-links a {
-    /* padding: 1rem 6rem; */
-    width: 100%;
-    border-bottom: 1px solid var(--marrom);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  .nav-links li a {
+    display: block; /* faz o link se comportar como um bloco */
+    width: 100%; /* ocupa 100% do li */
+    text-decoration: none; /* remove underline */
+    color: white; /* ou a cor que quiser */
+    /* border-bottom: 1px solid var(--marrom); */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 0.6rem 0;
   }
 
-  .navbar {
-    justify-content: space-between;
+  .social-icons {
+    margin-top: 2.5rem;
+    margin: 0 auto;
   }
 
-  .hero h1 {
+  .social-icons i {
     font-size: 2rem;
   }
 
-  .btn {
-    font-size: 0.9rem;
+  .hamburger {
+    display: flex;
   }
 
-  .sobre {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
+  /* SOBRE ================= */
 
   .sobre .container {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 1rem;
-    width: 100%;
   }
-  .sobre img {
+  .sobre .container img {
     max-width: 100%;
-    margin: 0 0 0 0;
-    width: 100%;
   }
 
-  .sobre-conteudo {
-    max-width: 100%;
+  /* PRODUTOS ================= */
+
+  .produtos #cardapio-content {
+    max-width: 440px;
     width: 100%;
+    margin: 0 auto;
+  }
+
+  .produtos #cardapio-content .item {
+    flex-direction: column;
     text-align: center;
-    margin-top: 0.5rem;
   }
-
-  .valores {
-    margin-bottom: 2.5rem;
-  }
-
-  #cardapio-content .item {
-    /* flex-direction: column; */
-    text-align: center;
+  .produtos #cardapio-content img {
+    max-width: 500px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5rem auto;
+    height: 300px;
   }
 
-  #cardapio-content .item img {
-    width: 270px;
-    height: 240px;
-    object-fit: cover;
-    border-radius: 0 8px 8px 8px;
-  }
+  /* LOCALIZAÇÃO ================= */
 
-  #cardapio-content .item-content p {
-    padding: 1rem;
-    border-bottom: 1px solid var(--marrom);
+  .localizacao .contato-e-mapa {
+    flex-direction: column;
   }
-
-  #cardapio-content .item-content .price {
-    padding: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .mapa iframe {
+  .localizacao .mapa iframe {
     height: 400px;
-  }
-
-  .contato-e-mapa {
-    flex-direction: column;
-    padding: 0;
-  }
-  .contato-info {
-    text-align: center;
-    word-break: break-all;
-  }
-  .contato-info p i {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  .contato-info p strong {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-}
-
-@media (max-width: 620px) {
-  #cardapio {
-    padding: 3rem 1rem;
-  }
-
-  #cardapio h2 {
-    font-size: 2rem;
-  }
-
-  #cardapio-content {
-    padding: 0 1rem;
-  }
-
-  .category h3 {
-    font-size: 1.2rem;
-  }
-
-  .produtos .descricao {
-    font-size: 1rem;
-  }
-
-  #cardapio-content .item {
-    width: 360px;
-    flex-direction: column;
-    text-align: center;
-    margin: 1rem auto;
-  }
-
-  #cardapio-content .item img {
-    width: 100%;
-    height: 270px;
-  }
-
-  #cardapio-content .item-content p {
-    font-size: 0.9rem;
-    border-bottom: 1px solid var(--marrom);
-  }
-
-  #cardapio-content .item-content .price {
-    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
-  header {
-    padding: 0.3rem 1rem;
+  /* SOBRE ================= */
+
+  .sobre .container {
+    padding: 0;
   }
 
-  .sobre h2,
-  .produtos h2,
-  .depoimentos h2,
-  .localizacao h2 {
-    font-size: 2rem;
+  .sobre .valores li {
+    text-align: center;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  .btn {
-    padding: 0.8rem 2rem;
-  }
-  .sobre .valores strong,
-  .sobre .valores i {
+  .sobre .valores strong {
     display: block;
   }
 
-  #cardapio-content .item {
-    width: 100%;
+  /* LOCALIZAÇÃO ================= */
+
+  .localizacao .contato-info {
+    text-align: center;
+    word-break: break-all;
   }
 
-  #cardapio-content .item img {
-    width: 100%;
-    height: 200px;
+  .localizacao .contato-info p strong {
+    display: block;
+    justify-content: center;
   }
+}
 
-  .depoimentos .depoimento {
-    padding: 2rem;
-  }
-
-  .depoimentos .depoimento img {
-    height: auto;
-    width: 60px;
-  }
-
-  .depoimentos .depoimento p {
-    font-size: 1rem;
-  }
-
-  .mapa iframe {
-    height: 300px;
-  }
+/* 🔹 Imagens sempre fluidas */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
