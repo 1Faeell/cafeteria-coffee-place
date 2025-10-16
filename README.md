@@ -8,7 +8,7 @@
 ## 🌐 **Visão Geral**
 
 O **Coffee’s Place** é um site fictício de cafeteria criado como **projeto Front-end**, desenvolvido inteiramente com **HTML, CSS e JavaScript puro**.
-A ideia é representar uma cafeteria real com um toque artesanal — onde cada detalhe visual e funcional transmite conforto e sofisticação.
+A ideia é representar uma cafeteria real com um toque artesanal onde cada detalhe visual e funcional transmite conforto e sofisticação.
 
 Ele possui:
 
